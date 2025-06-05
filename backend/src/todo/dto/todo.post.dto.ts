@@ -1,6 +1,7 @@
 import {
   IsIn,
   IsNotEmpty,
+  IsOptional,
   IsString,
   Length,
 } from 'class-validator';
@@ -20,8 +21,8 @@ export default class TodoPostDto {
   @IsIn([1, 2, 3, 4, 5])
   public urgency: number;
 
-  @IsNotEmpty()
+  @IsOptional()
   @IsString()
   @IsIn(['PENDENT', 'WORKING', 'FINISHED'])
-  public status: string;
+  public status?: string;
 }

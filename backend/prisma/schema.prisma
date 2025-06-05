@@ -30,7 +30,7 @@ model Task {
     description String @db.Text
     urgency Int @db.TinyInt
     createdAt DateTime? @default(now())
-    status Status @default(PENDENT)
+    status Status @default(PENDENT) // como tem um default para ele, it's not necessary use to ? for mark as optional, because when some field have the default() already is optional!!
     
     user_id String
     user User @relation(fields: [user_id], references: [id])
