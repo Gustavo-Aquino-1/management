@@ -39,7 +39,7 @@ model Task {
 model Notes {
     id Int @id @default(autoincrement())
     title String
-    decription String  @db.Text
+    description String  @db.Text
     createdAt DateTime @default(now())
 
     user_id String

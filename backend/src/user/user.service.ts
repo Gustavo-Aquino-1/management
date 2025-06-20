@@ -33,6 +33,6 @@ export default class UserService {
     const secret = process.env.JWT_PASSWORD
     const token = await jwt.sign({ id: user.id }, secret, jwtConfig)
 
-    return { id: user.id, token }
+    return { token }
   }
 }
